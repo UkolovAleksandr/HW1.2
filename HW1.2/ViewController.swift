@@ -40,7 +40,9 @@ class ViewController: UIViewController {
         if startButton.currentTitle == "START" {
             startButton.setTitle("NEXT", for: .normal)
         }
-        switch eEELight {
+        
+        
+    switch eEELight {
             
         case .red:
             greenLigt.alpha = lightIsOff
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         case .green:
             greenLigt.alpha = lightIsOn
             yellowLigt.alpha = lightIsOff
-            eEELight = .green
+            eEELight = .red
         }
     }
 }
