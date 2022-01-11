@@ -7,8 +7,10 @@
 
 import UIKit
 
-enum EEELight {
-    case red, yellow, green }
+enum CorrentLight {
+    case red, yellow, green
+    
+}
 
 class ViewController: UIViewController {
     @IBOutlet var redLight: UIView!
@@ -17,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var startButton: UIButton!
     
-    private var eEELight = EEELight.red
+    private var correntLight = CorrentLight.red
     private let lightIsOn: CGFloat = 1
     private let lightIsOff: CGFloat = 0.3
     
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
         redLight.alpha = lightIsOff
         yellowLigt.alpha = lightIsOff
         greenLigt.alpha = lightIsOff
-        }
+    }
     
     override func viewWillLayoutSubviews() {
         redLight.layer.cornerRadius = redLight.frame.width / 2
@@ -41,21 +43,19 @@ class ViewController: UIViewController {
             startButton.setTitle("NEXT", for: .normal)
         }
         
-        
-    switch eEELight {
-            
-        case .red:
+        switch correntLight {
+            case .red:
             greenLigt.alpha = lightIsOff
             redLight.alpha = lightIsOn
-            eEELight = .yellow
+            correntLight = .yellow
         case .yellow:
             redLight.alpha = lightIsOff
             yellowLigt.alpha = lightIsOn
-            eEELight = .green
+            correntLight = .green
         case .green:
             greenLigt.alpha = lightIsOn
             yellowLigt.alpha = lightIsOff
-            eEELight = .red
+            correntLight = .red
         }
     }
 }
