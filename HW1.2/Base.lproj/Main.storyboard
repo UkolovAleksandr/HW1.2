@@ -32,11 +32,6 @@
                                     <constraint firstAttribute="width" constant="100" id="iXU-F0-whS"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTi-he-8r2" userLabel="START">
-                                <rect key="frame" x="126.5" y="452" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="START"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKI-Ra-HF8" userLabel="GreenLigt">
                                 <rect key="frame" x="110" y="276" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -45,30 +40,36 @@
                                     <constraint firstAttribute="height" constant="100" id="y85-zy-xsc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-hn-thG">
+                                <rect key="frame" x="136.5" y="464" width="47" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.084000614613844254" green="0.14774222036055845" blue="0.16948784722222221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zKI-Ra-HF8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9ad-3u-4Il"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bTi-he-8r2" secondAttribute="bottom" constant="85" id="Bfb-eu-dmK"/>
                             <constraint firstItem="C9L-SI-COZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hzv-Xh-yWN"/>
                             <constraint firstItem="45B-DA-K34" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IUK-vU-Ucl"/>
                             <constraint firstItem="zKI-Ra-HF8" firstAttribute="top" secondItem="45B-DA-K34" secondAttribute="bottom" constant="28" id="XS9-qd-Xje"/>
-                            <constraint firstItem="bTi-he-8r2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zcj-RE-lQ3"/>
                             <constraint firstItem="C9L-SI-COZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="a01-tz-ekC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zpo-hn-thG" secondAttribute="bottom" constant="74" id="hHX-aZ-6SS"/>
+                            <constraint firstItem="Zpo-hn-thG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kno-P5-QaZ"/>
                             <constraint firstItem="45B-DA-K34" firstAttribute="top" secondItem="C9L-SI-COZ" secondAttribute="bottom" constant="28" id="tkS-Fr-Hvx"/>
+                            <constraint firstItem="Zpo-hn-thG" firstAttribute="top" secondItem="zKI-Ra-HF8" secondAttribute="bottom" constant="88" id="yh1-Ig-UjG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLigt" destination="zKI-Ra-HF8" id="F2a-bj-mD2"/>
                         <outlet property="redLight" destination="C9L-SI-COZ" id="eyu-mP-gsp"/>
-                        <outlet property="startButton" destination="bTi-he-8r2" id="Bw6-GD-Wn8"/>
+                        <outlet property="startButton" destination="Zpo-hn-thG" id="8R1-lb-uW9"/>
                         <outlet property="yellowLigt" destination="45B-DA-K34" id="EHK-7w-cWx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="70"/>
+            <point key="canvasLocation" x="18.75" y="69.718309859154928"/>
         </scene>
     </scenes>
     <resources>

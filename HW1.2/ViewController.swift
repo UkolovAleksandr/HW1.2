@@ -9,7 +9,6 @@ import UIKit
 
 enum CorrentLight {
     case red, yellow, green
-    
 }
 
 class ViewController: UIViewController {
@@ -27,24 +26,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         startButton.layer.cornerRadius = 10
+        
         redLight.alpha = lightIsOff
         yellowLigt.alpha = lightIsOff
         greenLigt.alpha = lightIsOff
-    }
+        }
     
     override func viewWillLayoutSubviews() {
         redLight.layer.cornerRadius = redLight.frame.width / 2
         yellowLigt.layer.cornerRadius = redLight.frame.width / 2
         greenLigt.layer.cornerRadius = redLight.frame.width / 2
-    }
+        }
     
     @IBAction func startButtonPresed() {
         if startButton.currentTitle == "START" {
-            startButton.setTitle("NEXT", for: .normal)
+           startButton.setTitle("NEXT", for: .normal)
         }
         
         switch correntLight {
-            case .red:
+        case .red:
             greenLigt.alpha = lightIsOff
             redLight.alpha = lightIsOn
             correntLight = .yellow
@@ -59,4 +59,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
