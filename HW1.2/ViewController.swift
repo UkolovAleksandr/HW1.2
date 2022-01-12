@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CorrentLight {
+enum CurrentLight {
     case red, yellow, green
 }
 
@@ -15,10 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLigt: UIView!
     @IBOutlet var greenLigt: UIView!
-    
     @IBOutlet var startButton: UIButton!
     
-    private var correntLight = CorrentLight.red
+    private var currentLight = CurrentLight.red
     private let lightIsOn: CGFloat = 1
     private let lightIsOff: CGFloat = 0.3
     
@@ -38,24 +37,24 @@ class ViewController: UIViewController {
         greenLigt.layer.cornerRadius = redLight.frame.width / 2
         }
     
-    @IBAction func startButtonPresed() {
+    @IBAction func startButtonPressed() {
         if startButton.currentTitle == "START" {
            startButton.setTitle("NEXT", for: .normal)
         }
         
-        switch correntLight {
+    switch currentLight {
         case .red:
             greenLigt.alpha = lightIsOff
             redLight.alpha = lightIsOn
-            correntLight = .yellow
+            currentLight = .yellow
         case .yellow:
             redLight.alpha = lightIsOff
             yellowLigt.alpha = lightIsOn
-            correntLight = .green
+            currentLight = .green
         case .green:
             greenLigt.alpha = lightIsOn
             yellowLigt.alpha = lightIsOff
-            correntLight = .red
+            currentLight = .red
         }
     }
 }
